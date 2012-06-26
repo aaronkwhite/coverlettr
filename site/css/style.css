@@ -1,0 +1,16 @@
+/* Stylesheet Notes
+
+Color Palette: http://www.colourlovers.com/palette/1098589/coup_de_gr%C3%A2ce
+
+99B898		153,184,152
+FECEA8		254,206,168
+FF847C		255,132,124
+E84A5F		232,74,95
+2A363B		42,54,59
+
+
+*/
+
+body {background: #2A363B;}
+
+h1 {margin: 140px 0; text-align: center; color: #E84A5F; font-family: 'Oxygen', sans-serif; font-size: 48px;}
