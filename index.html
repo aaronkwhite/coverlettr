@@ -1,66 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+<head>
 
-		<title>Scroll Demo</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-		<meta name="description" content="The plugin that lets you define custom scroll paths" />
-
-		<link href="http://fonts.googleapis.com/css?family=Terminal+Dosis&subset=latin" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="script/lib/prefixfree.min.js"></script>
-		
-		<link rel="stylesheet" type="text/css" href="css/style.css" /> 
-		<link rel="stylesheet" type="text/css" href="/scrollpath.css" /> 
-
-	</head>
-
-	<body>
-		<nav>
-			<ul>
-				<li><a href="#start">1</a></li>
-				<li><a href="#description">2</a></li>
-				<li><a href="#syntax">3</a></li>
-				<li><a href="#scrollbar">4</a></li>
-				<li><a href="#source">6</a></li>
-				<li><a href="#follow">5</a></li>
-			</ul>
-		</nav>
-		<div class="settings">
-			<a href="" class="show-path">Show Path</a>
-		</div>
-		<div class="wrapper">
-			<div class="demo">
-				<h1>Hey Foraker Labs!</h1>
-			</div>
-			
-			<div class="description">
-				<span class="big">I wanted to apply for the Senior Web and Mobile UI Designer Gig... </span>
-			</div>
-
-			<div class="syntax">
-				<span class="big">At first I was going to tell you about all the things I've done and how much I really want to work in a Ruby shop with a fantastic team. </span>
-			</div>
-
-			<div class="scrollbar">
-				<span class="big">I mean who wouldn't want to work with the guys & gals behind Ruby on Beer?</span>
-			</div>
-
-			<div class="source">
-				<span class="big">Then I thought instead of showing you my resume and the same old list of projects (both of which are spectacular), which might get lost in that stack of resumes over there on your desk.<span>
-			</div>
-
-			<div class="follow">
-				<span class="big">I'd build something...</span>
-			</div>
-		</div>
-
+	<title>Hey [company] [name]... We Should Talk!</title>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	
+	<link rel="stylesheet" href="css/scroll.css" type="text/css">
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/jquery.scrollorama.js"></script>
+	<script src="js/jquery.lettering-0.6.1.min.js"></script>
 
-	<script type="text/javascript" src="js/lib/jquery.easing.js"></script>
-	<script type="text/javascript" src="js/jquery.scrollpath.js"></script>
+	<!-- Fancy Fonts -->
+	<script type="text/javascript" src="http://use.typekit.com/oyv5som.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-	<script type="text/javascript" src="js/demo.js"></script>
+	<!-- I'M WATCHING YOU! -->
+	<script type="text/javascript">
+		(function(d,c){var a,b,g,e;a=d.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===d.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';b=d.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);c._i=[];c.init=function(a,d,f){var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";g="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config".split(" "); for(e=0;e<g.length;e++)(function(a){b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,0)))}})(g[e]);c._i.push([a,d,f])};window.mixpanel=c})(document,[]); mixpanel.init("05bf4d1d4feba66a5031c96b6c3819cd");
 
+		//Google Analytics of course
+		var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-30609041-1']);
+		  _gaq.push(['_trackPageview']);
 
-	</body>
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+</head>
+<body>
+
+	<div class="scrollblock" id="intro">
+		<h1 id="one">Hey<br/>[company]<br/>[name]!</h1>
+	</div>
+
+	<div class="scrollblock" id="about">
+		<h3 id="two">I want to apply for the [enter the super fancy job title here] Gig...</h3>
+		<!-- <h3 id="two">I want to apply for the Senior Web and Mobile UI Designer Gig...</h3> -->
+	</div>
+
+	<div class="scrollblock" id="why">
+		<h3 id="three">At first I was going to tell you about all the things I've done and how much I really want to work in a Ruby shop with a fantastic team.
+		<br/><small>I mean who wouldn't want to work with the guys & gals behind [awesome ruby app]?</small></h3>
+		<span id="ruby"><img src="images/ruby.png" width="128" height="128" alt="Ruby is Awesome" /></span>
+	</div>
+
+	<div class="scrollblock" id="list">
+		<h3 id="four">So instead of just showing you my <br/><a href="http://aaronkwhite.com/aaronkwhite_resume.pdf" id="resume-top" class="mixpanel_track" track_event="Top Resume Link">resume</a> & <a href="http://www.aaronkwhite.com/portfolio" target="_blank" id="portfolio-top" class="mixpanel_track" track_event="Portfolio Link Top">portfolio</a> <small>(which are awesome!)</small>
+		<br/> and run the risk of them getting lost in that stack over there on your desk...</h3>
+	</div>
+
+	<div class="scrollblock" id="build">
+		<h1 id="five">I'd build something...</h1>
+	</div>
+
+	<div class="scrollblock" id="close">
+		<h3>So I threw together this site to showcase some of my abilities. You can see more of my work in my <a href="http://www.aaronkwhite.com/portfolio" id="portfolio-bottom" class="mixpanel_track" track_event="Portfolio Link Bottom" target="_blank">portfolio</a> or over at <a href="http://www.dribbble.com/aaronkwhite" target="_blank" id="dribbble" class="mixpanel_track" track_event="Dribbble Link">dribbble</a>.</h3>
+		<h1>We Should Talk!</h1>
+
+		<p class="colophon">
+			This site was built using <a href="http://johnpolacek.github.com/scrollorama/" target="_blank" id="scrollorama" class="mixpanel_track" track_event="Scrollorama Link">Scrollorama</a>, HTML, a little bit of CSS and some <a href="http://www.typekit.com" target="_blank" id="typekit" class="mixpanel_track" track_event="Typekit Link">Typekit</a> sprinkled on top.
+			<br/>Built by <a href="http://www.twitter.com/aaronkwhite" id="twitter" class="mixpanel_track" track_event="Aaron Twitter Link">@aaronkwhite</a>
+		</p>
+	</div>
+
+	<script>
+
+		$(document).ready(function() {
+		    var scrollorama = $.scrollorama({ blocks:'.scrollblock' });
+
+		    //lettering.js code
+			$("#intro h1").lettering('lines');
+
+		    scrollorama.animate('#two',{ delay: 400, duration: 500, property:'opacity', start: 0 });
+		    scrollorama.animate('#three',{ delay: 300, duration: 400, property:'left', start:-1400, end:0 });
+			scrollorama.animate('#ruby',{ delay: 400, duration: 500, property:'opacity', start: 0 });
+		    scrollorama.animate('#four',{ delay: 300, duration: 400, property:'right', start:-1400, end:0 });
+		    scrollorama.animate('#five',{ delay: 200, duration: 600, property:'zoom', start:5 });
+		});
+
+		//Mixpanel Link Tracking... Told you I was watching ;-)
+		track_links = function(){
+		   $(".mixpanel_track").each(function(){
+				mpmetrics.track_links('#'+ $(this).attr("id"),$(this).attr("track_event"), jQuery.parseJSON($(this).attr("track_properties"))); 
+		    }); 
+		};
+
+	</script>
+
+</body>
 </html>
